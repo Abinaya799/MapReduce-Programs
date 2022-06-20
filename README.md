@@ -20,3 +20,13 @@ I have made some modifications of my own as follows
     iv) While handling big datasets, it is always best practice to make it compact to reduce the overhead transfer costs. So i have make the climate csv files to a compressed sequence file (the original file was 1.5 gb in size but it was reduced to 300-400 MB)
   
   [For the (iv) Use the program Sequence_Files] 
+  
+  
+  # Libraries needed for the MapReduce Program
+  
+  1) hadoop-common-2.4.0.jar
+  2) hadoop-hdfs-2.4.0.jar
+  3) hadoop-mapreduce-client-common-2.4.0.jar
+  4) hadoop-mapreduce-client-core-2.4.0.jar
+
+Maven and jar files for the above libraries can be found in Maven and Jar directories respectively.
