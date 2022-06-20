@@ -1,0 +1,4 @@
+{"name": "Weather",
+"namespace": "",
+ "type": "record",
+ "fields": [ { "name": "station", "type": "string"},{"name": "date","type": "string"},{"name": "Max","type":"float"},{"name":"Min","type":"float"}]}
