@@ -1,4 +1,4 @@
-1) This project does the exact same functionality. But here we are converting the input datafile to an avro file with only the fields needed for the computation
+1) This Avro project does the exact same functionality as Weather.java. But here we are converting the input datafile to an avro file with only the fields needed for the computation
 
 2) The output is also an avro file with String key and float value
 
