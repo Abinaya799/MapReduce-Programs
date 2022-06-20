@@ -1,0 +1,7 @@
+1) Download the wonderland.txt
+2) Copy the text to the hadoop cluster
+		hdfs dfs -copyFromLocal /user/abinaya/wonderland.txt /inputFiles
+		
+3) Compile the project and create a jar. From the directory with the jar File execute the following
+
+		hadoop jar WordCount.jar /inputFiles/wonderland.txt /outputFiles/WordCount
