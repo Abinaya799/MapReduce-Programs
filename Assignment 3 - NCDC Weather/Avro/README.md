@@ -10,7 +10,7 @@
    
    
 5) The jars needed for this program is 
-      i) avro-mapred-1.11.0
+      		i) avro-mapred-1.11.0
 		ii) avro-1.11.0
 		iii) avro-tools-1.11.0
 		iv) hadoop-common-2.4.0
