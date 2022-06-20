@@ -1,0 +1,8 @@
+1) Download the 2013.tar.gz from this link --> https://drive.google.com/file/d/1nKjK0lJ0y1PclCvBXYIbuXQAFYUefecQ/view?usp=sharing
+2) Decompress it by 
+
+ tar -xf 2013.tar.gz 
+
+3) [OPTIONAL STEP] Use the Sequence_Files program to convert the csv files to single sequence file and then load to the HDFS.
+
+4) hadoop jar <jar file location> <input csv file location> <output directory> 
