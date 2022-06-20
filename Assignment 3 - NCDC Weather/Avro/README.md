@@ -6,5 +6,5 @@
 
 4) The schmea is converted to an class file using the below command:
 
-   java -jar <location of avro-tools-1.11.0.jar> compile schema <location of schema file> <location where you want the class file to be created>
+   java -jar {location of avro-tools-1.11.0.jar} compile schema {location of schema file} {location where you want the class file to be created}
   
