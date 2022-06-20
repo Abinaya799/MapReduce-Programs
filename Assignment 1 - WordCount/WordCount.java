@@ -14,9 +14,12 @@ import java.io.IOException;
 
 public class WordCount{
 
+    # For getting the number of words in the data file as a counter in the Mapreduce result
     enum Example{
         NUMBER_OF_WORDS
     }
+    
+    #Mapper class
     public static class AMapper extends Mapper<LongWritable, Text,Text, IntWritable>{
         @Override
         public void map(LongWritable keyin,Text valuein,Context context) throws IOException, InterruptedException {
@@ -33,7 +36,8 @@ word = word.replaceAll("[^a-zA-Z]","");                    context.getCounter(Ex
         }
 
     }
-
+    
+    # Reducer class
     public static class AReducer extends Reducer<Text, IntWritable,Text, IntWritable> {
         @Override
         public void reduce(Text keyin, Iterable<IntWritable> valuein, Context context) throws IOException, InterruptedException {
@@ -48,22 +52,27 @@ word = word.replaceAll("[^a-zA-Z]","");                    context.getCounter(Ex
 
     public static void main(String[] args) throws IOException, InterruptedException, ClassNotFoundException
  {
+        # Assign the new mapreduce job
         Job new_job = new Job();
         new_job.setJobName("Assignment 1");
         new_job.setMapperClass(AMapper.class);
         new_job.setJarByClass(Assignment.class);
         new_job.setReducerClass(AReducer.class);
 
+        #Specify the input data file location and the output directory .Make sure that output directory doesn't already exists
         FileInputFormat.addInputPath(new_job,new Path(args[0]));
         FileOutputFormat.setOutputPath(new_job,new Path(args[1]));
 
+        #Specify the data format of input and output files
         new_job.setInputFormatClass(TextInputFormat.class);
         new_job.setOutputFormatClass(TextOutputFormat.class);
 
+        #Specify the Wriatble type for the output key and value
         new_job.setOutputKeyClass(Text.class);
         new_job.setOutputValueClass(IntWritable.class);
         new_job.setMapOutputKeyClass(Text.class);
         new_job.setMapOutputValueClass(IntWritable.class);
+        
         System.exit(new_job.waitForCompletion(true) ? 0 : 1);
 
     }
