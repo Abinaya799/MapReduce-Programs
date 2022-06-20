@@ -7,4 +7,11 @@
 4) The schmea is converted to an class file using the below command:
 
    java -jar {location of avro-tools-1.11.0.jar} compile schema {location of schema file} {location where you want the class file to be created}
+   
+   
+5) The jars needed for this program is 
+      i) avro-mapred-1.11.0
+		ii) avro-1.11.0
+		iii) avro-tools-1.11.0
+		iv) hadoop-common-2.4.0
   
